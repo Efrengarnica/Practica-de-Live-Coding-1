@@ -21,11 +21,15 @@ const myArray = ["sol", "código", "libro", "react", "viento", "python", "git", 
 
 //Funcion para agreggar las palabras en la lista de mi html
 function arrayPrint(arr){
+    if(arr.length===0){
+        window.alert("La longitud de tu palabra es igual ó más grande que todas las palabras del arreglo, entonces NO hay palabras para mostrar")
+    }else{
     for(let i=0;i<arr.length;i++){
         ulLista.insertAdjacentHTML("beforeend", `
             <li>${arr[i]}</li>
             `)
-    }//for
+        }//for
+    }//else
 }//arrayPrint
 
 enviarBoton.addEventListener("click",function(event){
